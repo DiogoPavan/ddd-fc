@@ -39,15 +39,15 @@ export default class Customer {
      * O set em comparação com o changeName, tecnicamente falando, tem o mesmo resultado
      * Porém o changeName representa uma ação dentro do sistema, uma regra de negócio
      *
-     * Expreessividade semantica
+     * Expressividade semantica
      */
     // set name(name: string) {
     //     this._name = name;
     // }
 
     changeName(name: string) {
-        this._name = name;
-        this.validate();
+      this._name = name;
+      this.validate();
     }
 
     get Address(): Address {
@@ -63,15 +63,15 @@ export default class Customer {
     }
 
     activate() {
-        if (this._address === undefined) {
-            throw new Error("Address is mandatory to activate a customer");
-        }
+      if (this._address === undefined) {
+          throw new Error("Address is mandatory to activate a customer");
+      }
 
-        this._active = true;
+      this._active = true;
     }
 
     deactivate() {
-        this._active = false;
+      this._active = false;
     }
 
     addRewardPoints(points: number) {

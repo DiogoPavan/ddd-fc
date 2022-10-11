@@ -40,5 +40,5 @@ export default class OrderItemModel extends Model {
   declare name: string;
 
   @Column({ allowNull: false })
-  declare price: number;
+  declare unitPrice: number;
 }
